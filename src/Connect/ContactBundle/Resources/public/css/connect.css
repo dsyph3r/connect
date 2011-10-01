@@ -1,0 +1,31 @@
+html, body { background: #555; }
+body { width: 100%; padding-top: 60px; }
+a { color: #000; text-decoration: none; }
+a:hover { color: #FF7F30; text-decoration: none; }
+
+form div.error > label, form div.error span.help-inline, form div.error span.help-block { color: #FF493F }
+form div.error { background: none; }
+
+.app-navigation h2 { font-family: 'Leckerli One', cursive; color: #000; font-size: 40px; margin-bottom: 100px; text-align: center; font-weight: normal; }
+.app-navigation a { font-family: 'Leckerli One', cursive; font-size: 40px; display: block; text-align: center; }
+
+.create { border-radius: 5px; background: #444; margin-bottom: 20px; }
+.create form { padding: 10px; }
+.create form h2 { background: #FF7F30; padding: 5px 20px 5px 150px; margin-bottom: 18px; font-size: 24px; border-radius: 3px 3px 0 0 }
+
+.create form label { color: #fff; }
+.create form .actions { background: #555; border-top: none; margin: 0; }
+.create .actions { padding: 10px 20px 10px 150px; background: inherit; }
+.btn.primary { background-color: #FF7316; background-image: -moz-linear-gradient(center top , #FC9250, #FF7316); }
+
+.contact { border-radius: 5px; background: #444; min-height: 280px; margin-bottom: 20px; }
+.contact .inner { margin: 10px; }
+.contact h2 { font-size: 20px;  line-height: 22px;  font-weight: normal; color: #fff; background: #555; padding: 10px; margin-bottom: 10px; }
+.contact h2 form {  margin-bottom: 0; line-height: 30px; display: inline }
+.contact h2 .contact-delete { float: right; text-decoration: none; color: #444; font-weight: bolder; font-size: 30px; border: none; background: transparent;  }
+.contact img { margin-right: 10px; vertical-align: top; width: 100px; }
+.contact .details { display: inline-block; clear: both; }
+.contact .details p { margin-bottom: 3px; }
+.contact .details label { display: inline-block; width: 60px; margin: 0 10px 0 0; padding: 0; color: #fff; }
+.contact .details span { display: inline-block }
+.contact .additional label { display: block; float: none; margin: 0; padding: 0; width: auto; text-align: left; color: #fff; }

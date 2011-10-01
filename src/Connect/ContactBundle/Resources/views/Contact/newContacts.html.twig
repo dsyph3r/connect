@@ -1,0 +1,60 @@
+{% extends 'ConnectContactBundle::layout.html.twig' %}
+
+{% block content %}
+
+    <div id="create-contact" class="create">
+        <form action="{{ path('connect_post_contacts') }}" method="post" {{ form_enctype(form) }}>
+            <h2>Create Contact</h2>
+            <div class="fields">
+                <div class="clearfix">
+                    <label for="xlInput2">{{ form_label(form.name) }}</label>
+                    <div class="input">
+                        {{ form_widget(form.name, {'attr': {'class': 'xlarge', 'placeholder': 'Adam Jones' }}) }}
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="xlInput2">{{ form_label(form.email) }}</label>
+                    <div class="input">
+                        {{ form_widget(form.email, {'attr': {'class': 'xlarge', 'placeholder': 'email@example.com' }}) }}
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="xlInput2">{{ form_label(form.location) }}</label>
+                    <div class="input">
+                        {{ form_widget(form.location, {'attr': {'class': 'xlarge', 'placeholder': 'Wales, UK' }}) }}
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="xlInput2">{{ form_label(form.website) }}</label>
+                    <div class="input">
+                        {{ form_widget(form.website, {'attr': {'class': 'xlarge', 'placeholder': 'www.example.com' }}) }}
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="xlInput2">{{ form_label(form.tel) }}</label>
+                    <div class="input">
+                        {{ form_widget(form.tel, {'attr': {'class': 'xlarge', 'placeholder': '09876534234' }}) }}
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="xlInput2">{{ form_label(form.mobile) }}</label>
+                    <div class="input">
+                        {{ form_widget(form.mobile, {'attr': {'class': 'xlarge', 'placeholder': '34234353445' }}) }}
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="textarea">{{ form_label(form.additional) }}</label>
+                    <div class="input">
+                        {{ form_widget(form.additional, {'attr': {'class': 'xxlarge', 'placeholder': 'Any additional information...', 'rows': 3 }}) }}
+                        <span class="help-block">
+                            Provide any additional information (eg, Work colleague at Google)
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <input type="submit" value="Create Contact" class="create-new btn primary">&nbsp;<button class="btn cancel-new" type="reset">Cancel</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

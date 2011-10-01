@@ -1,0 +1,12 @@
+ConnectContactBundle_homepage:
+    pattern:  /
+    defaults: { _controller: ConnectContactBundle:Connect:index }
+    
+ConnectContactBundle_backbone:
+    pattern:  /backbone
+    defaults: { _controller: ConnectContactBundle:Backbone:index }
+    
+contacts:
+    type:     rest
+    resource: Connect\ContactBundle\Controller\ContactController
+    name_prefix:  connect_

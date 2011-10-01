@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connect</title>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.1.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
+    <link href="{{ asset('bundles/connectcontact/css/connect.css') }}" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container app-navigation ">
+        <h2>Get Connected! Choose your method...</h2>
+
+        <div class="row">
+            <a href="{{ path('connect_get_contacts') }}" class="span8">Twig App</a>
+            <a href="{{ path('ConnectContactBundle_backbone') }}" class="span8">Backbone App</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connect</title>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.1.min.css">
+    <link href="{{ asset('bundles/connectcontact/css/connect.css') }}" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="topbar-wrapper" style="z-index: 5;">
+        <div class="topbar">
+            <div class="fill">
+                <div class="container">
+                    <h3><a href="{{ path('ConnectContactBundle_homepage') }}">Connect</a></h3>
+                    <ul>
+                        <li class="active"><a href="{{ path('connect_get_contacts') }}">My Contacts</a></li>
+                        <li><a href="{{ path('connect_new_contacts') }}">New Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

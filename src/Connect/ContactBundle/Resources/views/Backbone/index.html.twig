@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connect</title>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.1.min.css">
+    <link href="{{ asset('bundles/connectcontact/css/connect.css') }}" type="text/css" rel="stylesheet" />
+    <script src="{{ asset('bundles/connectcontact/js/vendor/json2.js') }}"></script>
+    <script src="{{ asset('bundles/connectcontact/js/vendor/jquery-1.6.4.min.js') }}"></script>
+    <script src="{{ asset('bundles/connectcontact/js/vendor/underscore.js') }}"></script>
+    <script src="{{ asset('bundles/connectcontact/js/vendor/backbone.js') }}"></script>
+    <script src="{{ asset('bundles/connectcontact/js/connect.js') }}"></script>
+</head>
+<body>
+
+    <div id="connectapp">
+
+        <div class="topbar-wrapper" style="z-index: 5;">
+            <div class="topbar">
+                <div class="fill">
+                    <div class="container">
+                        <h3><a href="{{ path('ConnectContactBundle_homepage') }}">Connect</a></h3>
+                        <ul>
+                            <li class="active"><a href="#" id="nav-my-contacts">My Contacts</a></li>
+                            <li><a href="#" id="nav-create-contact">New Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div id="create-contact" class="create" style="display: none">
+                <form>
+                    <h2>Create Contact</h2>
+                    <div class="fields">
+                        <div class="clearfix">
+                            <label for="xlInput2">Name</label>
+                            <div class="input">
+                                <input type="text" size="30" name="name" id="create-contact-name" class="xlarge" placeholder="Adam Jones">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label for="xlInput2">Email</label>
+                            <div class="input">
+                                <input type="email" size="30" name="email" id="create-contact-email" class="xlarge" placeholder="email@example.com">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label for="xlInput2">Location</label>
+                            <div class="input">
+                                <input type="text" size="30" name="location" id="create-contact-location" class="xlarge" placeholder="Wales, UK">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label for="xlInput2">Website</label>
+                            <div class="input">
+                                <input type="url" size="30" name="website" id="create-contact-website" class="xlarge" placeholder="www.example.com">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label for="xlInput2">Tel</label>
+                            <div class="input">
+                                <input type="text" size="30" name="tel" id="create-contact-tel" class="xlarge" placeholder="09876534234">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label for="xlInput2">Mobile</label>
+                            <div class="input">
+                                <input type="text" size="30" name="mobile" id="create-contact-mobile" class="xlarge" placeholder="34234353445">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label for="textarea">Additional</label>
+                            <div class="input">
+                                <textarea rows="3" name="additional" id="create-twidle-additional" class="xxlarge" placeholder="Any additional information..."></textarea>
+                                <span class="help-block">
+                                    Provide any additional information (eg, Work colleague at Google)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <input type="submit" value="Create Contact" class="create-new btn primary">&nbsp;<button class="btn cancel-new" type="reset">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="contact-list" class="row">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Templates -->
+
+    <script type="text/template" id="contact-template">
+        <div class="contact span8">
+            <div class="inner">
+                <h2>
+                    <span class="contact-name"></span>
+                    <a href="#" class="contact-delete" title="Delete Contact">X</a>
+                </h2>
+                <img src="" class="contact-image"/>
+                <div class="details">
+                    <p>
+                        <label>Email:</label>
+                        <span class="contact-email"></span>
+                    </p>
+                    <p>
+                        <label>Location:</label>
+                        <span class="contact-location"></span>
+                    </p>
+                    <p>
+                        <label>Website:</label>
+                        <span class="contact-website"></span>
+                    </p>
+                    <p>
+                        <label>Tel:</label>
+                        <span class="contact-tel"></span>
+                    </p>
+                    <p>
+                        <label>Mobile:</label>
+                        <span class="contact-mobile"></span>
+                    </p>
+                </div>
+                <p class="additional">
+                    <label>Additional</label>
+                    <span class="contact-additional"></span>
+                </p>
+            </div>
+        </div>
+    </script>
+
+</body>
+</html>

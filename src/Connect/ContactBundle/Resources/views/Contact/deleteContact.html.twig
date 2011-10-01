@@ -1,0 +1,9 @@
+{% extends 'ConnectContactBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="alert-message block-message success">
+        <a href="{{ path('connect_get_contacts') }}" class="close">×</a>
+        <p><strong>Success!</strong> Contact was successfully deleted.
+        <a href="{{ path('connect_get_contacts') }}">Click here</a> to view all contacts.</p>
+    </div>
+{% endblock %}

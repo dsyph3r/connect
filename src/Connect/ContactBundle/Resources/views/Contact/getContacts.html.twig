@@ -1,0 +1,51 @@
+{% extends 'ConnectContactBundle::layout.html.twig' %}
+
+{% block content %}
+    <div id="contact-list" class="row">
+        {% for contact in contacts %}
+            <div class="contact span8">
+                <div class="inner">
+                    <h2>
+                        <form action="{{ path('connect_delete_contact', { 'id': contact.id } ) }}" method="post">
+                            <input type="hidden" name="_method" value="delete" />
+                            <input type="submit" value="X" class="contact-delete"/>
+                        </form>
+                        <span class="contact-name">{{ contact.name }}</span>
+
+                    </h2>
+                    <img src="{{ contact.gravatarUrl }}" class="contact-image"/>
+                    <div class="details">
+                        <p>
+                            <label>Email:</label>
+                            <span class="contact-email">{{ contact.email }}</span>
+                        </p>
+                        <p>
+                            <label>Location:</label>
+                            <span class="contact-location">{{ contact.location }}</span>
+                        </p>
+                        <p>
+                            <label>Website:</label>
+                            <span class="contact-website">{{ contact.website }}</span>
+                        </p>
+                        <p>
+                            <label>Tel:</label>
+                            <span class="contact-tel">{{ contact.tel }}</span>
+                        </p>
+                        <p>
+                            <label>Mobile:</label>
+                            <span class="contact-mobile">{{ contact.mobile }}</span>
+                        </p>
+                    </div>
+                    <p class="additional">
+                        <label>Additional</label>
+                        <span class="contact-additional">{{ contact.additional }}</span>
+                    </p>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert-message block-message info">
+                <p>You have not added any contacts. Click 'New Contact' above to get started.</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

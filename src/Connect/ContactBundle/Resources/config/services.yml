@@ -1,0 +1,7 @@
+parameters:
+#    connect_contact.example.class: Connect\ContactBundle\Example
+
+services:
+#    connect_contact.example:
+#        class: %connect_contact.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
