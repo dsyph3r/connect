@@ -1,8 +1,6 @@
-*.komodoproject
-app/config/parameters.ini
-vendor/*
-app/cache/*
-app/logs/*
-web/bundles/*
-app/DoctrineMigrations
-*~
+/web/bundles/
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/vendor/
+/app/config/parameters.ini
